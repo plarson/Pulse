@@ -11,7 +11,7 @@ import Pulse
 struct ConsoleMessageDetailsView: View {
     let message: LoggerMessageEntity
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
     var body: some View {
         contents
             .navigationBarTitle("", displayMode: .inline)

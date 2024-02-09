@@ -24,7 +24,7 @@ struct RichTextView: View {
         return copy
     }
 
-#if os(iOS)
+#if os(iOS) || os(visionOS)
     var body: some View {
         contents
             .onAppear { viewModel.prepare(searchContext) }
